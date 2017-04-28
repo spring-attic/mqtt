@@ -1,0 +1,9 @@
+# MQTT Source and Sink
+
+To learn more about these applications and the supported properties, please review the following link.
+
+## MQTT Source
+include::spring-cloud-starter-stream-source-mqtt/README.adoc[]
+
+## MQTT Sink
+include::spring-cloud-starter-stream-sink-mqtt/README.adoc[]
