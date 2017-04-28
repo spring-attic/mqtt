@@ -1,0 +1,31 @@
+//tag::ref-doc[]
+= MQTT Source
+
+The "mqtt" source enables receiving messages from MQTT.
+
+== Options
+
+The **$$mqtt$$** $$source$$ has the following options:
+
+//tag::configuration-properties[]
+$$mqtt.binary$$:: $$true to leave the payload as bytes$$ *($$Boolean$$, default: `$$false$$`)*
+$$mqtt.charset$$:: $$the charset used to convert bytes to String (when binary is false)$$ *($$String$$, default: `$$UTF-8$$`)*
+$$mqtt.clean-session$$:: $$whether the client and server should remember state across restarts and reconnects$$ *($$Boolean$$, default: `$$true$$`)*
+$$mqtt.client-id$$:: $$identifies the client$$ *($$String$$, default: `$$scdf.mqtt.client.id.source$$`)*
+$$mqtt.connection-timeout$$:: $$the connection timeout in seconds$$ *($$Integer$$, default: `$$30$$`)*
+$$mqtt.keep-alive-interval$$:: $$the ping interval in seconds$$ *($$Integer$$, default: `$$60$$`)*
+$$mqtt.password$$:: $$the password to use when connecting to the broker$$ *($$String$$, default: `$$guest$$`)*
+$$mqtt.persistence$$:: $$'memory' or 'file'$$ *($$String$$, default: `$$memory$$`)*
+$$mqtt.persistence-directory$$:: $$Persistence directory$$ *($$String$$, default: `$$/tmp/paho$$`)*
+$$mqtt.qos$$:: $$the qos; a single value for all topics or a comma-delimited list to match the topics$$ *($$int[]$$, default: `$$[0]$$`)*
+$$mqtt.topics$$:: $$the topic(s) (comma-delimited) to which the source will subscribe$$ *($$String[]$$, default: `$$[scdf.mqtt]$$`)*
+$$mqtt.url$$:: $$location of the mqtt broker(s) (comma-delimited list)$$ *($$String$$, default: `$$tcp://localhost:1883$$`)*
+$$mqtt.username$$:: $$the username to use when connecting to the broker$$ *($$String$$, default: `$$guest$$`)*
+//end::configuration-properties[]
+
+//end::ref-doc[]
+== Build
+
+```
+$ mvn clean package
+```
