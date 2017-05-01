@@ -27,7 +27,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.cloud.stream.app.test.mqtt.MqttRule;
+import org.springframework.cloud.stream.app.test.mqtt.MqttTestSupport;
 import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.cloud.stream.test.binder.MessageCollector;
 import org.springframework.context.annotation.Bean;
@@ -51,7 +51,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public abstract class MqttSourceTests {
 
 	@ClassRule
-	public static MqttRule mqttRule = new MqttRule();
+	public static MqttTestSupport mqttTestSupport = new MqttTestSupport();
 
 	@Autowired
 	protected Source channels;

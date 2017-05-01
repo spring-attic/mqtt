@@ -45,7 +45,8 @@ public class MqttConfiguration {
 		factory.setKeepAliveInterval(mqttProperties.getKeepAliveInterval());
 		if (ObjectUtils.nullSafeEquals(mqttProperties.getPersistence(), "file")) {
 			factory.setPersistence(new MqttDefaultFilePersistence(mqttProperties.getPersistenceDirectory()));
-		} else if (ObjectUtils.nullSafeEquals(mqttProperties.getPersistence(), "memory")) {
+		}
+		else if (ObjectUtils.nullSafeEquals(mqttProperties.getPersistence(), "memory")) {
 			factory.setPersistence(new MemoryPersistence());
 		}
 		return factory;

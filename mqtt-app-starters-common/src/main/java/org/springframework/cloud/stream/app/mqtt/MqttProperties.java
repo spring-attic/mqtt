@@ -29,7 +29,7 @@ public class MqttProperties {
 	/**
 	 * location of the mqtt broker(s) (comma-delimited list)
 	 */
-	private String url = "tcp://localhost:1883";
+	private String[] url = new String[] { "tcp://localhost:1883" };
 
 	/**
 	 * the username to use when connecting to the broker
@@ -66,11 +66,11 @@ public class MqttProperties {
 	 */
 	private String persistenceDirectory = "/tmp/paho";
 
-	public String getUrl() {
+	public String[] getUrl() {
 		return url;
 	}
 
-	public void setUrl(String url) {
+	public void setUrl(String[] url) {
 		this.url = url;
 	}
 

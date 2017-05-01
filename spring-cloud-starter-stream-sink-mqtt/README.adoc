@@ -20,7 +20,7 @@ $$mqtt.persistence-directory$$:: $$Persistence directory$$ *($$String$$, default
 $$mqtt.qos$$:: $$the quality of service to use$$ *($$Integer$$, default: `$$1$$`)*
 $$mqtt.retained$$:: $$whether to set the 'retained' flag$$ *($$Boolean$$, default: `$$false$$`)*
 $$mqtt.topic$$:: $$the topic to which the sink will publish$$ *($$String$$, default: `$$scdf.mqtt$$`)*
-$$mqtt.url$$:: $$location of the mqtt broker(s) (comma-delimited list)$$ *($$String$$, default: `$$tcp://localhost:1883$$`)*
+$$mqtt.url$$:: $$location of the mqtt broker(s) (comma-delimited list)$$ *($$String[]$$, default: `$$[tcp://localhost:1883]$$`)*
 $$mqtt.username$$:: $$the username to use when connecting to the broker$$ *($$String$$, default: `$$guest$$`)*
 //end::configuration-properties[]
 

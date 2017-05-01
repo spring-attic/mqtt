@@ -2,8 +2,8 @@
 
 To learn more about this application and the supported properties, please review the following link.
 
-## Rabbit Source
+## MQTT Source
 include::spring-cloud-starter-stream-source-mqtt/README.adoc[]
 
-## Rabbit Sink
+## MQTT Sink
 include::spring-cloud-starter-stream-sink-mqtt/README.adoc[]
