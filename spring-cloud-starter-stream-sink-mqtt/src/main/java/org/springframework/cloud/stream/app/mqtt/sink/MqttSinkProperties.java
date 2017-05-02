@@ -20,6 +20,7 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.validation.annotation.Validated;
 
 /**
  * Properties for the Mqtt Sink.
@@ -27,6 +28,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @author Janne Valkealahti
  *
  */
+@Validated
 @ConfigurationProperties("mqtt")
 public class MqttSinkProperties {
 

@@ -19,6 +19,7 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.validation.annotation.Validated;
 
 /**
  * Properties for the Mqtt Source.
@@ -26,6 +27,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @author Janne Valkealahti
  *
  */
+@Validated
 @ConfigurationProperties("mqtt")
 public class MqttSourceProperties {
 

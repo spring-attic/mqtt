@@ -18,6 +18,7 @@ package org.springframework.cloud.stream.app.mqtt;
 import javax.validation.constraints.Size;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.validation.annotation.Validated;
 
 /**
  * Generic mqtt connection properties.
@@ -25,6 +26,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @author Janne Valkealahti
  *
  */
+@Validated
 @ConfigurationProperties("mqtt")
 public class MqttProperties {
 
