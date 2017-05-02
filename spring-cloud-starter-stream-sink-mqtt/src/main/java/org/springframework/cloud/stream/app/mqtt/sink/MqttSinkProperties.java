@@ -15,6 +15,10 @@
  */
 package org.springframework.cloud.stream.app.mqtt.sink;
 
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.Range;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
@@ -29,12 +33,12 @@ public class MqttSinkProperties {
 	/**
 	 * identifies the client
 	 */
-	private String clientId = "scdf.mqtt.client.id.sink";
+	private String clientId = "stream.client.id.sink";
 
 	/**
 	 * the topic to which the sink will publish
 	 */
-	private String topic = "scdf.mqtt";
+	private String topic = "stream.mqtt";
 
 	/**
 	 * the quality of service to use
@@ -56,6 +60,7 @@ public class MqttSinkProperties {
 	 */
 	private boolean async = false;
 
+	@Range(min = 0, max = 2)
 	public int getQos() {
 		return qos;
 	}
@@ -72,6 +77,8 @@ public class MqttSinkProperties {
 		this.retained = retained;
 	}
 
+	@NotBlank
+	@Size(min = 1, max = 23)
 	public String getClientId() {
 		return clientId;
 	}
@@ -80,6 +87,7 @@ public class MqttSinkProperties {
 		this.clientId = clientId;
 	}
 
+	@NotBlank
 	public String getTopic() {
 		return topic;
 	}

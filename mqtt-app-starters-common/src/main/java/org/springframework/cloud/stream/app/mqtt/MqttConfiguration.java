@@ -19,6 +19,7 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 import org.eclipse.paho.client.mqttv3.persist.MqttDefaultFilePersistence;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.integration.mqtt.core.DefaultMqttPahoClientFactory;
 import org.springframework.integration.mqtt.core.MqttPahoClientFactory;
 import org.springframework.util.ObjectUtils;
@@ -29,6 +30,7 @@ import org.springframework.util.ObjectUtils;
  * @author Janne Valkealahti
  *
  */
+@Configuration
 public class MqttConfiguration {
 
 	@Autowired

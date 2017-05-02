@@ -15,6 +15,9 @@
  */
 package org.springframework.cloud.stream.app.mqtt.source;
 
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
@@ -29,12 +32,12 @@ public class MqttSourceProperties {
 	/**
 	 * identifies the client
 	 */
-	private String clientId = "scdf.mqtt.client.id.source";
+	private String clientId = "stream.client.id.source";
 
 	/**
 	 * the topic(s) (comma-delimited) to which the source will subscribe
 	 */
-	private String[] topics = new String[] { "scdf.mqtt" };
+	private String[] topics = new String[] { "stream.mqtt" };
 
 	/**
 	 * the qos; a single value for all topics or a comma-delimited list to match the topics
@@ -51,6 +54,8 @@ public class MqttSourceProperties {
 	 */
 	private String charset = "UTF-8";
 
+	@NotBlank
+	@Size(min = 1, max = 23)
 	public String getClientId() {
 		return clientId;
 	}

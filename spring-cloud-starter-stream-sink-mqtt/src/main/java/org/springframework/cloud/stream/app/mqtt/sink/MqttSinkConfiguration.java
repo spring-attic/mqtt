@@ -50,7 +50,7 @@ public class MqttSinkConfiguration {
 	@ServiceActivator(inputChannel = Sink.INPUT)
 	public MessageHandler mqttOutbound() {
 		MqttPahoMessageHandler messageHandler = new MqttPahoMessageHandler(properties.getClientId(), mqttClientFactory);
-		messageHandler.setAsync(true);
+		messageHandler.setAsync(properties.isAsync());
 		messageHandler.setDefaultTopic(properties.getTopic());
 		messageHandler.setConverter(pahoMessageConverter());
 		return messageHandler;

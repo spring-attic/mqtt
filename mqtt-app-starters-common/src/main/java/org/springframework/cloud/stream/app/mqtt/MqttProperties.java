@@ -15,6 +15,8 @@
  */
 package org.springframework.cloud.stream.app.mqtt;
 
+import javax.validation.constraints.Size;
+
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
@@ -66,6 +68,7 @@ public class MqttProperties {
 	 */
 	private String persistenceDirectory = "/tmp/paho";
 
+	@Size(min = 1)
 	public String[] getUrl() {
 		return url;
 	}
