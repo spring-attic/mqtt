@@ -3,6 +3,19 @@
 
 This module sends messages to MQTT.
 
+== Input
+
+==== Headers:
+
+==== Payload:
+
+* `byte[]`
+* `String`
+
+== Output
+
+N/A
+
 == Options
 
 The **$$mqtt$$** $$sink$$ has the following options:
@@ -24,10 +37,20 @@ $$mqtt.url$$:: $$location of the mqtt broker(s) (comma-delimited list)$$ *($$Str
 $$mqtt.username$$:: $$the username to use when connecting to the broker$$ *($$String$$, default: `$$guest$$`)*
 //end::configuration-properties[]
 
-//end::ref-doc[]
-
 == Build
 
 ```
-$ mvn clean package
+$ ./mvnw clean install -PgenerateApps
+$ cd apps
 ```
+You can find the corresponding binder based projects here. You can then cd into one one of the folders and build it:
+```
+$ ./mvnw clean package
+```
+
+== Examples
+
+```
+java -jar mqtt-sink.jar --mqtt.clientid= --mqtt.topic=
+```
+//end::ref-doc[]
