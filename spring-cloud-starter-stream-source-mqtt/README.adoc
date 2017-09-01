@@ -3,6 +3,19 @@
 
 The "mqtt" source enables receiving messages from MQTT.
 
+== Input
+
+N/A 
+
+== Output
+
+==== Headers:
+
+==== Payload:
+
+* `String` if binary setting is `false` (default)
+* `byte[]` if binary setting is `true`
+
 == Options
 
 The **$$mqtt$$** $$source$$ has the following options:
@@ -23,9 +36,20 @@ $$mqtt.url$$:: $$location of the mqtt broker(s) (comma-delimited list)$$ *($$Str
 $$mqtt.username$$:: $$the username to use when connecting to the broker$$ *($$String$$, default: `$$guest$$`)*
 //end::configuration-properties[]
 
-//end::ref-doc[]
 == Build
 
 ```
-$ mvn clean package
+$ ./mvnw clean install -PgenerateApps
+$ cd apps
 ```
+You can find the corresponding binder based projects here. You can then cd into one one of the folders and build it:
+```
+$ ./mvnw clean package
+```
+
+== Examples
+
+```
+java -jar mqtt-source.jar --mqtt.clientId=
+```
+//end::ref-doc[]
