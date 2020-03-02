@@ -30,7 +30,7 @@ $$mqtt.keep-alive-interval$$:: $$the ping interval in seconds$$ *($$Integer$$, d
 $$mqtt.password$$:: $$the password to use when connecting to the broker$$ *($$String$$, default: `$$guest$$`)*
 $$mqtt.persistence$$:: $$'memory' or 'file'$$ *($$String$$, default: `$$memory$$`)*
 $$mqtt.persistence-directory$$:: $$Persistence directory$$ *($$String$$, default: `$$/tmp/paho$$`)*
-$$mqtt.qos$$:: $$the qos; a single value for all topics or a comma-delimited list to match the topics$$ *($$int[]$$, default: `$$[0]$$`)*
+$$mqtt.qos$$:: $$the qos; a single value for all topics or a comma-delimited list to match the topics$$ *($$Integer[]$$, default: `$$[0]$$`)*
 $$mqtt.topics$$:: $$the topic(s) (comma-delimited) to which the source will subscribe$$ *($$String[]$$, default: `$$[stream.mqtt]$$`)*
 $$mqtt.url$$:: $$location of the mqtt broker(s) (comma-delimited list)$$ *($$String[]$$, default: `$$[tcp://localhost:1883]$$`)*
 $$mqtt.username$$:: $$the username to use when connecting to the broker$$ *($$String$$, default: `$$guest$$`)*
