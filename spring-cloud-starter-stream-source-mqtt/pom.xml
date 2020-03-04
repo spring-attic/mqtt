@@ -51,10 +51,6 @@
 						</mqtt-source>
 					</generatedApps>
 					<enableContainerImageMetadata>true</enableContainerImageMetadata>
-					<metadataSourceTypeFilters>
-						<filter>org.springframework.cloud.stream.app.mqtt.source.MqttSourceProperties</filter>
-						<filter>org.springframework.cloud.stream.app.mqtt.MqttProperties</filter>
-					</metadataSourceTypeFilters>
 				</configuration>
 			</plugin>
 		</plugins>

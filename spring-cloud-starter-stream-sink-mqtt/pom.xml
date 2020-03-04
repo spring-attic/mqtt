@@ -51,10 +51,6 @@
 						</mqtt-sink>
 					</generatedApps>
 					<enableContainerImageMetadata>true</enableContainerImageMetadata>
-					<metadataSourceTypeFilters>
-						<filter>org.springframework.cloud.stream.app.mqtt.sink.MqttSinkProperties</filter>
-						<filter>org.springframework.cloud.stream.app.mqtt.MqttProperties</filter>
-					</metadataSourceTypeFilters>
 				</configuration>
 			</plugin>
 		</plugins>
